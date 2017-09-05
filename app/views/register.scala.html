@@ -1,0 +1,89 @@
+@() 
+
+@import helper._;
+
+@main("Register") {
+	
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html"><img src='@routes.Assets.versioned("images/logo.png")' alt="Typica - Bootstrap Awesome Template!"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+        	<div class="span6">
+        		
+        		<div class="register-info-wraper">
+        			<div id="register-info">
+        			
+        				<h1>You are about 30 seconds away from using this awesome app. Good choice!</h1>
+        			
+        				<ul dir="rtl">
+        					<li>Blah blah blah</li>
+        					<li>That's why this app is so awesome</li>
+        					<li>!So register, like, right NOW</li>
+        					<li>Or don't, who cares</li>
+        				</ul>
+        				
+        			</div>
+        		</div>
+
+        	</div>
+
+        	<div class="span6">
+        		<div id="register-wraper">
+					@helper.form(action = routes.Register.authenticate(), 'id -> "register-form", 'class -> "form") {
+						<legend>Register to <span class="blue">MyApp</span></legend>
+					
+						<div class="body">
+							<!-- first name -->
+							<div class="control-group control-inline">
+								<label for="name">First name</label>
+								<input name="name" class="input-medium" type="text">
+							</div>
+							<!-- last name -->
+							<div class="control-group control-inline">
+								<label for="surname">Last name</label>
+								<input name="surname" class="input-medium" type="text">
+							</div>
+							<!-- username -->
+							<label>Username</label>
+							<input class="input-huge" type="text">
+							<!-- email -->
+							<label>E-mail</label>
+							<input class="input-huge" type="text">
+							<!-- password -->
+							<label>Password</label>
+							<input class="input-huge" type="text">
+
+						</div
+					
+					
+						<div class="footer">
+							<label class="checkbox inline">
+								<input type="checkbox" id="inlineCheckbox1" value="option1"> I agree to something I will never read
+							</label>
+							<button type="submit" class="btn btn-success">Register</button>
+						</div>
+        		    }
+        		</div>
+        	</div>
+
+        </div>
+    </div>
+
+    <footer class="white navbar-fixed-bottom">
+      Alread have an account? <a href='@routes.Login.index()' class="btn btn-black">Sign in</a>
+    </footer>
+	
+
+}

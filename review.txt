@@ -1,0 +1,20 @@
+
+
+Platform description:
+
+Keepnpay is a platform which allows users to convert physical cash to virtual cash and also transfer this cash to any other platform for cashing out or whatever.
+
+Steps involved:
+1. Users get to create an account
+1a. users get to sign involved
+
+2. The user sees their accounts with all the information involved
+2a. The user can carry out transactions or logout
+
+
+So here are the steps I'd love to take in development:
+
+1. Create Register controller
+2. Create Sign in controller
+3. Edit Register view
+4. Edit Sign-in view
